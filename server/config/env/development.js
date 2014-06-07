@@ -3,7 +3,7 @@
 module.exports = {
     db: 'mongodb://localhost/mean-dev',
     app: {
-        name: 'MEAN - FullStack JS - Development'
+        name: 'tau.pe - friendly link shortening'
     },
     facebook: {
         clientID: 'APP_ID',
