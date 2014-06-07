@@ -16,6 +16,16 @@
     <meta property="og:image" content="APP_LOGO">
     <meta property="og:site_name" content="tau.pe">
     <meta property="fb:admins" content="APP_ADMIN">
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-46044500-5', 'tau.pe');
+        ga('send', 'pageview');
+
+    </script>
 
     {% for file in assets.core.css %}
         <link rel="stylesheet" href="{{file}}">
