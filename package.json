@@ -1,9 +1,9 @@
 {
-  "name": "mean",
-  "description": "MEAN.io: A fullstack javascript platformed powerd by MongoDB, ExpressJS, AngularJS, NodeJS.",
-  "version": "0.3.3",
+  "name": "tau.pe",
+  "description": "tau.pe - A link shortener for Developers, built using Mean.io.",
+  "version": "0.0.1",
   "private": false,
-  "author": "Linnovate <mean@linnovate.net>",
+  "author": "Dustin Moorman <dustin.moorman@gmail.com>",
   "contributors": [
     { "name": "Lior Kesos", "mail": "lior@linnovate.net" },
     { "name": "Yonatan Ellman", "mail": "yonatan@linnovate.net" },
