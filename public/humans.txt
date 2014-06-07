@@ -3,7 +3,7 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Dustin Moorman -- Developer -- http://twitter.com/dustinmoorman
 
 # THANKS
 
