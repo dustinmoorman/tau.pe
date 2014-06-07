@@ -3,7 +3,7 @@
 module.exports = {
     db: 'mongodb://localhost/mean-dev',
     app: {
-        name: 'tau.pe - friendly link shortening'
+        name: 'taupe'
     },
     facebook: {
         clientID: 'APP_ID',
