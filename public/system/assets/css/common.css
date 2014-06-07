@@ -28,7 +28,8 @@ html {
 }
 .content {
     margin-top:70px;
-    width:100%
+    width:100%;
+    background-color: #b38b6d;
 }
 footer {
     position:fixed;
