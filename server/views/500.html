@@ -7,11 +7,16 @@
 {% endblock %}
 
 {% block content %}
-    <div id="error-message-box">
-        <div id="error-stack-trace">
-            <pre>
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-4">
+            <h1>Sorry! / Désolée</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+            <div>
                 <code>{{error}}</code>
-            </pre>
+            </div>
         </div>
     </div>
 {% endblock %}
