@@ -9,3 +9,7 @@ app.set('views', __dirname + '/views')
 app.get('/', function(request, response){
   response.render('index', {'title': "Coming Soon"});
 });
+
+app.get('*', function(request, response){
+  response.render('404', {});
+});
