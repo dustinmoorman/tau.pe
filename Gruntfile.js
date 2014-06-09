@@ -1,6 +1,6 @@
 module.exports = function(grunt) {
 
-    //require('time-grunt')(grunt);
+    require('time-grunt')(grunt);
 
     var paths = {
         js: ['*.js', 'assets/**/*.js', 'assets/js/foundation/*.js','assets/js/foundation/vendor/*.js'],
