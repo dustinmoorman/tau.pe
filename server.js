@@ -13,3 +13,6 @@ app.get('/', function(request, response){
 app.get('*', function(request, response){
   response.render('404', {});
 });
+
+app.listen(3000);
+console.dir("Started tau.pe");
