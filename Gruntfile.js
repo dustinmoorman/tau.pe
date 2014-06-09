@@ -41,7 +41,7 @@ module.exports = function(grunt) {
         }
     });
 
-    grunt.loadNpmTasks('grunt-nodemon');
+    require('load-grunt-tasks')(grunt);
     grunt.registerTask('default', ['concurrent']);
 
 };
