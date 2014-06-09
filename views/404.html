@@ -1,9 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>tau.pe - 404 Not found</title>
-</head>
-<body>
-Sorry, tau.pe will be back soon under new management!
-</body>
-</html>
+{% extends 'layout.html' %}
+
+{% block title %}404{% endblock %}
+
+{% block head %}
+{% parent %}
+{% endblock %}
+
+{% block content %}
+<p>Page not found.</p>
+{% endblock %}
