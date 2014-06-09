@@ -5,6 +5,7 @@ var express = require('express'),
 app.engine('html', cons.swig)
 app.set('view engine', 'html')
 app.set('views', __dirname + '/views')
+app.locals({assets:'/assets'})
 
 app.get('/', function(request, response){
   response.render('index', {'title': "Coming Soon"});
