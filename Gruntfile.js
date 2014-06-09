@@ -1,6 +1,6 @@
 module.exports = function(grunt) {
 
-    require('time-grunt')(grunt);
+    //require('time-grunt')(grunt);
 
     var paths = {
         js: ['*.js', 'assets/**/*.js', 'assets/js/foundation/*.js','assets/js/foundation/vendor/*.js'],
@@ -45,6 +45,7 @@ module.exports = function(grunt) {
 
     grunt.loadNpmTasks('grunt-nodemon');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-concurrent');
     grunt.registerTask('default', ['concurrent']);
 
 };
