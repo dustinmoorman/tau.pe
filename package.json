@@ -1,0 +1,23 @@
+{
+    "name": "tau.pe",
+    "description": "A friendly link shortener built with Node.",
+    "version": "0.0.1",
+    "author": "Dustin Moorman <dustinmoorman@gmail.com>",
+    "contributors": [
+        { "name": "Dustin Moorman", "mail": "dustinmoorman@gmail.com"}
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/dustinmoorman/tau.pe.git"
+    },
+    "engines": {
+        "node": "0.10.28",
+        "npm": "1.4.9"
+    },
+    "dependencies": {
+       "express": "^4.2.0",
+       "swig":"^1.3.2",
+       "consolidate": "^0.10.0",
+       "path": "^0.4.9"
+    }
+}
