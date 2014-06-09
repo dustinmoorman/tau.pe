@@ -26,11 +26,6 @@ module.exports = function(passport, db) {
             return passport;
         });
 
-        // Register auth dependency
-        mean.register('auth', function() {
-            return require(appPath + '/server/routes/middlewares/authorization');
-        });
-
         // Register database dependency
         mean.register('database', {
             connection: db
