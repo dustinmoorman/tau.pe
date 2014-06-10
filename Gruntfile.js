@@ -57,6 +57,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-concurrent');
     
-    grunt.registerTask('default', ['concurrent']);
+    grunt.registerTask('default', ['concurrent', 'jshint']);
 
 };
