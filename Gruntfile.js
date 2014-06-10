@@ -18,6 +18,7 @@ module.exports = function(grunt) {
         watch: {
             js: {
                 files: paths.js,
+		tasks: ['jshint'],
                 options: {
                     livereload: true
                 }
@@ -40,12 +41,22 @@ module.exports = function(grunt) {
             options: {
                 logConcurrentOutput: true
             }
-        }
+        },
+	jshint: {
+	    all: {
+		src: paths.js,
+		options: {
+		  jshintrc: true
+		}
+	    }
+	}
     });
 
+    grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-nodemon');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-concurrent');
+    
     grunt.registerTask('default', ['concurrent']);
 
 };
