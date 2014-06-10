@@ -1,7 +1,12 @@
 html {
-    background-color: #cdb39f;
+  background-color: #cdb39f;
 }
 
 body {
-    background-color: #cdb39f;
+  background-color: #cdb39f;
+}
+
+.page-heading {
+	margin-top:30%;
+	text-align: center;
 }
