@@ -1,10 +1,13 @@
 {
-    "name": "tau.pe",
-    "description": "A friendly link shortener built with Node.",
-    "version": "0.0.1",
-    "author": "Dustin Moorman <dustinmoorman@gmail.com>",
-    "contributors": [
-        { "name": "Dustin Moorman", "mail": "dustinmoorman@gmail.com"}
+  "name": "tau.pe",
+  "description": "A friendly link shortener built with Node.",
+  "version": "0.0.1",
+  "author": "Dustin Moorman <dustinmoorman@gmail.com>",
+  "contributors": [
+    {
+      "name": "Dustin Moorman",
+      "mail": "dustinmoorman@gmail.com"
+    }
   ],
   "repository": {
     "type": "git",
@@ -27,6 +30,7 @@
   },
   "devDependencies": {
     "grunt": "~0.4.5",
+    "grunt-contrib-jshint": "^0.10.0",
     "grunt-nodemon": "^0.2.1",
     "time-grunt": "^0.3.2"
   }
