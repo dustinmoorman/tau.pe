@@ -6,7 +6,20 @@ body {
   background-color: #cdb39f;
 }
 
+h1 {
+	font-family: 'Arizonia', cursive;
+	font-weight: 400;
+  font-size: 6.73rem;
+}
+
 .page-heading {
-	margin-top:30%;
+	margin-top:20%;
 	text-align: center;
+}
+
+.short-url {
+	width:80%;
+	height:2.24rem;
+	font-size: 1.25em;
+	padding: .25rem;
 }

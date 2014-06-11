@@ -4,11 +4,12 @@
 
 {% block head %}
 {% parent %}
+<link href='http://fonts.googleapis.com/css?family=Arizonia' rel='stylesheet' type='text/css'>
 {% endblock %}
 
 {% block content %}
 <div class="page-heading">
   <h1>{{title}}</h1>
-  <input type="text" placeholder="Shorten me!" name="shorten-url"/>
+  <input class="short-url" type="text" placeholder="Shorten me!" name="shorten-url"/>
 </div>
 {% endblock %}
