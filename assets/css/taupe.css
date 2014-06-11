@@ -6,6 +6,11 @@ body {
   background-color: #cdb39f;
 }
 
+h1 {
+	font-family: 'Arizonia', cursive;
+	font-weight: 400;
+}
+
 .page-heading {
 	margin-top:30%;
 	text-align: center;
