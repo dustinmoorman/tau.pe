@@ -9,7 +9,7 @@ app.set('views', __dirname + '/views')
 app.use(express.static(path.join(__dirname, 'public')))
 
 app.get('/', function(request, response){
-    response.render('index', {'title': "taupe"});
+    response.render('index', {'title': 'taupe'});
 });
 
 app.get('*', function(request, response){
