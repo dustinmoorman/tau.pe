@@ -6,7 +6,7 @@ var express = require('express'),
 app.engine('html', cons.swig)
 app.set('view engine', 'html')
 app.set('views', __dirname + '/views')
-app.use(express.static(path.join(__dirname, 'assets')))
+app.use(express.static(path.join(__dirname, 'public')))
 
 app.get('/', function(request, response){
     response.render('index', {'title': "Coming Soon!"});
