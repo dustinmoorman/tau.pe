@@ -12,10 +12,7 @@ app.set('views', __dirname + '/views');
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', routes.index);
-
-app.get('*', function(request, response){
-    response.render('404', {});
-});
+app.get('*', routes.index);
 
 app.listen(3000);
 console.dir('Started tau.pe');
