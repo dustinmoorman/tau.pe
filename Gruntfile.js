@@ -5,9 +5,9 @@ module.exports = function(grunt) {
     require('time-grunt')(grunt);
 
     var paths = {
-        js: ['*.js', 'assets/**/*.js', 'assets/js/foundation/*.js','assets/js/foundation/vendor/*.js'],
+        js: ['*.js', 'public/**/*.js', 'public/js/foundation/*.js','public/js/foundation/vendor/*.js'],
         html: ['*.html', 'views/**'],
-        css: ['*.css', 'assets/css/*.css']
+        css: ['*.css', 'public/css/*.css']
     };
 
     grunt.initConfig({
