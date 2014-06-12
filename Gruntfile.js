@@ -5,7 +5,7 @@ module.exports = function(grunt) {
     require('time-grunt')(grunt);
 
     var paths = {
-        js: ['*.js', 'public/**/*.js', 'public/js/foundation/*.js','public/js/foundation/vendor/*.js'],
+        js: ['*.js', 'public/**/*.js'],
         html: ['*.html', 'views/**'],
         css: ['*.css', 'public/css/*.css']
     };
