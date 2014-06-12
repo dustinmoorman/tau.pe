@@ -8,7 +8,7 @@ module.exports = function(grunt) {
         js: ['*.js', 'assets/**/*.js', 'assets/js/foundation/*.js','assets/js/foundation/vendor/*.js'],
         html: ['*.html', 'views/**'],
         css: ['*.css', 'assets/css/*.css']
-    }
+    };
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
