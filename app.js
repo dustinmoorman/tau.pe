@@ -4,10 +4,10 @@ var express = require('express'),
     routes = require('./routes'),
     app = express();
 
-app.engine('html', cons.swig)
-app.set('view engine', 'html')
-app.set('views', __dirname + '/views')
-app.use(express.static(path.join(__dirname, 'public')))
+app.engine('html', cons.swig);
+app.set('view engine', 'html');
+app.set('views', __dirname + '/views');
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', routes.index);
 
@@ -16,4 +16,4 @@ app.get('*', function(request, response){
 });
 
 app.listen(3000);
-console.dir("Started tau.pe");
+console.dir('Started tau.pe');
