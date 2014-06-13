@@ -9,7 +9,9 @@ var express = require('express'),
 app.engine('html', cons.swig);
 app.set('view engine', 'html');
 app.set('views', __dirname + '/views');
+
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.bodyParser());
 
 app.get('/', routes.index);
 app.get('*', routes.index);
