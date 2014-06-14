@@ -3,6 +3,7 @@
 var express = require('express'),
     cons = require('consolidate'),
     path = require('path'),
+    bodyParser = require('body-parser'),
     routes = require('./routes'),
     app = express();
 
@@ -12,7 +13,7 @@ app.set('views', __dirname + '/views');
 
 app.use('/public',express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.bodyParser());
+app.use(bodyParser.json());
 
 app.get('/', routes.index);
 
