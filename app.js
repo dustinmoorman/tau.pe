@@ -15,8 +15,8 @@ app.use(express.bodyParser());
 
 app.get('/', routes.index);
 
-app.get('/api/url/:id', api.getUrl);
-app.post('/api/url', api.addUrl);
+app.get('/url/:id', api.getUrl);
+app.post('/url', api.addUrl);
 
 app.get('*', routes.index);
 
