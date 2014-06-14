@@ -6,5 +6,6 @@ exports.getUrl = function(request, response){
 };
 
 exports.addUrl = function(request, response){
-  //@todo PUT for creating mongo record for url
+  //db.url.insert();
+  response.json(request.body);
 };
