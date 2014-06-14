@@ -5,6 +5,7 @@ var express = require('express'),
     path = require('path'),
     bodyParser = require('body-parser'),
     routes = require('./routes'),
+    api = require('./routes/api')
     app = express();
 
 app.engine('html', cons.swig);
