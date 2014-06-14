@@ -9,5 +9,7 @@ MongoClient.connect('mongodb://localhost:27017/taupe', function(error, db){
 
 //@todo GET for retrieving url from mongo
 
-//@todo PUT for creating mongo record for url
 
+exports.addUrl = function(request, response){
+  //@todo PUT for creating mongo record for url
+};
