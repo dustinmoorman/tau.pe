@@ -14,6 +14,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.bodyParser());
 
 app.get('/', routes.index);
+
+app.get('/api/url/:id', api.getUrl);
+app.post('/api/url', api.addUrl);
+
 app.get('*', routes.index);
 
 app.listen(3000);
