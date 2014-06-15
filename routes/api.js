@@ -37,16 +37,15 @@ exports.addUrl = function(request, response){
 
     var slug = generateSlug();
 
-    var result = db.url.insert({
+    db.url.insert({
       "url": request.body.url,
       "slug": slug,
       "ip": request.connection.remoteAddress,
       "date": Date.now()
     });
 
-    if(result.getError() == null){
-      json = {"slug": slug, "url": request.body.url};
-    }
+    json = {"slug": slug, "url": request.body.url};
+
   }
 
   response.json(json);
