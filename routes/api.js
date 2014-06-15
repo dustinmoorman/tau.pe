@@ -6,7 +6,13 @@ var generateSlug = function(){
 };
 
 exports.getUrl = function(request, response){
-  response.json(db.url.find({"slug": request.params.id}));
+  db.url.find({"slug": request.params.id}, function(err, url){
+    if(err){
+      response.json(err);
+    } else {
+      response.json(url);
+    }
+  });
 };
 
 exports.addUrl = function(request, response){
