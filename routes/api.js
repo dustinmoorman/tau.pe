@@ -1,14 +1,27 @@
 
 var db = require("mongojs").connect("localhost:27017/taupe", ["url"]);
 
-var generateSlug = function(){
+var slugExists = function(slug){
+  db.url.findOne({"slug": slug}, function(error, match){
+    return match != null;
+  });
+};
 
+var generateSlug = function(){
+  var lib = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  var slug = "";
+  do {
+    for( var i=0; i < Math.floor((Math.random() * 8)+1); i++ )
+      slug += lib.charAt(Math.floor(Math.random() * lib.length));
+  } while(slugExists(slug));
+
+  return slug;
 };
 
 exports.getUrl = function(request, response){
-  db.url.findOne({"slug": request.params.id}, function(err, url){
-    if(err){
-      response.json(err);
+  db.url.findOne({"slug": request.params.id}, function(error, url){
+    if(error){
+      response.json(error);
     } else {
       response.json(url);
     }
