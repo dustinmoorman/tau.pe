@@ -1,11 +1,27 @@
 
 var db = require("mongojs").connect("localhost:27017/taupe", ["url"]);
 
+var generateSlug = function(){
+
+};
+
 exports.getUrl = function(request, response){
   response.json(db.url.findOne({"slug": request.params.id}));
 };
 
 exports.addUrl = function(request, response){
-  //db.url.insert();
-  response.json(request.body);
+
+  var urlRegex = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
+
+  if(urlRegex.test(request.body.url)){
+    var result = db.url.insert({
+      "url": request.body.url,
+      "slug": generateSlug(),
+      "ip": request.connection.remoteAddress,
+      "date": Date.now()
+    });
+  }
+
+
+  response.json(result);
 };
