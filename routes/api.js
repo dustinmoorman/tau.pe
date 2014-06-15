@@ -2,7 +2,7 @@
 var db = require("mongojs").connect("localhost:27017/taupe", ["url"]);
 
 exports.getUrl = function(request, response){
-  //@todo GET for retrieving url from mongo
+  response.json(db.url.findOne({"slug": request.body.slug}));
 };
 
 exports.addUrl = function(request, response){
