@@ -31,16 +31,23 @@ exports.getUrl = function(request, response){
 exports.addUrl = function(request, response){
 
   var urlRegex = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
+  var json = {};
 
   if(urlRegex.test(request.body.url)){
+
+    var slug = generateSlug();
+
     var result = db.url.insert({
       "url": request.body.url,
-      "slug": generateSlug(),
+      "slug": slug,
       "ip": request.connection.remoteAddress,
       "date": Date.now()
     });
+
+    if(result.getError() == null){
+      json = {"slug": slug, "url": request.body.url};
+    }
   }
 
-
-  response.json(result);
+  response.json(json);
 };
