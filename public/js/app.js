@@ -14,9 +14,9 @@ app.controller('IndexCtrl', function ($scope, $http){
         }).success(function(response){
           $scope.url = 'http://tau.pe/' + response.slug;
         });
-      } else {
-        $scope.url = "That's not a URL!"
       }
+    } else {
+        $scope.url = "That's not a URL!"
     }
   };
 });
