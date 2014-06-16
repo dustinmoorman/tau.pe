@@ -11,7 +11,7 @@
 <div class="page-heading">
   <h1>{{title}}</h1>
   <form ng-submit="submit()">
-    <input class="short-url" type="text" placeholder="Shorten me!" name="long"/>
+    <input class="short-url" type="text" ng-model="long" placeholder="Shorten me!" name="long"/>
     <div class="url-container">
       {{url}}
     </div>
