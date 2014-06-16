@@ -1,4 +1,4 @@
-var app = angular.module('taupe', []);
+var app = angular.module('taupe', ['$scope', '$http']);
 
 app.controller('IndexCtrl', function ($scope, $http){
   $scope.long = '';
