@@ -10,9 +10,11 @@
 {% block content %}
 <div class="page-heading">
   <h1>{{title}}</h1>
-  <input class="short-url" type="text" placeholder="Shorten me!" name="long"/>
-  <div class="url-container">
-    {{url}}
-  </div>
+  <form ng-submit="submit()" ng-controller="IndexCtrl">
+    <input class="short-url" type="text" placeholder="Shorten me!" name="long"/>
+    <div class="url-container">
+      {{url}}
+    </div>
+  </form>
 </div>
 {% endblock %}
