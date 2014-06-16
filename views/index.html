@@ -10,7 +10,7 @@
 {% block content %}
 <div class="page-heading">
   <h1>{{title}}</h1>
-  <form ng-submit="submit()" ng-controller="IndexCtrl">
+  <form ng-submit="submit()">
     <input class="short-url" type="text" placeholder="Shorten me!" name="long"/>
     <div class="url-container">
       {{url}}
