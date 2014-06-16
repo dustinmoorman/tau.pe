@@ -6,12 +6,17 @@ app.controller('IndexCtrl', function ($scope, $http){
   $scope.long = '';
   $scope.url  = '';
   $scope.submit = function(){
-    if($scope.long.length > 0){
- 	    $http.post('/url',{
-        "url": $scope.long
-      }).success(function(response){
-        $scope.url = 'http://tau.pe/' + response.slug;
-      });
+    var urlRegex = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
+    if(urlRegex.test($scope.long)){
+      if($scope.long.length > 0){
+        $http.post('/url',{
+          "url": $scope.long
+        }).success(function(response){
+          $scope.url = 'http://tau.pe/' + response.slug;
+        });
+      } else {
+        $scope.url = "That's not a URL!"
+      }
     }
   };
 });
