@@ -4,7 +4,7 @@ var app = angular.module('taupe', []).config(function($interpolateProvider){
 
 app.controller('IndexCtrl', function ($scope, $http){
   $scope.long = '';
-  $scope.url  = '';
+  $scope.warn = '';
   $scope.submit = function(){
     var urlRegex = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
     if(urlRegex.test($scope.long)){
@@ -12,11 +12,12 @@ app.controller('IndexCtrl', function ($scope, $http){
         $http.post('/url',{
           "url": $scope.long
         }).success(function(response){
-          $scope.url = 'http://tau.pe/' + response.slug;
+          $scope.warn = "";
+          $scope.long = 'http://tau.pe/' + response.slug;
         });
       }
     } else {
-        $scope.url = "That's not a URL!"
+      $scope.warn = "That's not a URL!"
     }
   };
 });
