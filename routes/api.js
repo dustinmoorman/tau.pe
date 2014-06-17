@@ -1,3 +1,4 @@
+'use strict';
 
 var db = require("mongojs").connect("localhost:27017/taupe", ["url"]);
 
