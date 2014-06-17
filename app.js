@@ -34,8 +34,7 @@ app.get('/:slug', function(request, response){
 			if(chunk.length > 0) data += chunk;
 		});
 
-  	res.on("end", function(){	
-			console.log("data: " + data);
+  	res.on("end", function(){
 			if(data != null){
 				var json = JSON.parse(data);
 				if(json != null){
