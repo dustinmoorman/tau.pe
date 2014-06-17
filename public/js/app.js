@@ -17,7 +17,7 @@ app.controller('IndexCtrl', function ($scope, $http){
         });
       }
     } else {
-      $scope.warn = "That's not a URL!"
+      $scope.warn = "That's not a URL!";
     }
   };
 });
