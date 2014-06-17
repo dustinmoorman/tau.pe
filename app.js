@@ -27,22 +27,21 @@ app.get('/:slug', function(request, response){
     host: 'www.tau.pe',
     path: '/url/' + request.params.slug
   }, function(res){
-		var url = "";
-		var data = "";
+	var data = "";
 
-		res.on("data", function(chunk){
-			if(chunk.length > 0) data += chunk;
-		});
+	res.on("data", function(chunk){
+	  if(chunk.length > 0) data += chunk;
+	});
 
   	res.on("end", function(){
-			if(data != null){
-				var json = JSON.parse(data);
-				if(json != null){
-					return response.redirect(json.url);
-				}
-			}
-			response.render('index', {"title":"taupe"});
-		});
+      if(data != null){
+	    var json = JSON.parse(data);
+	    if(json != null){
+		  return response.redirect(json.url);
+	    }
+	  }
+	  response.render('index', {"title":"taupe"});
+    });
   }).end();
 });
 
