@@ -8,8 +8,10 @@ var slugExists = function(slug){
 };
 
 var generateSlug = function(){
+
   var lib = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
   var slug = "";
+
   do {
     for( var i=0; i < Math.floor((Math.random() * 8)+1); i++ )
       slug += lib.charAt(Math.floor(Math.random() * lib.length));
@@ -34,7 +36,6 @@ exports.addUrl = function(request, response){
   var json = {};
 
   if(urlRegex.test(request.body.url)){
-
     var slug = generateSlug();
 
     db.url.insert({
@@ -42,9 +43,7 @@ exports.addUrl = function(request, response){
       "slug": slug,
       "date": Date.now()
     });
-
     json = {"slug": slug};
-
   }
 
   response.json(json);
