@@ -40,7 +40,6 @@ exports.addUrl = function(request, response){
     db.url.insert({
       "url": request.body.url,
       "slug": slug,
-      "ip": request.connection.remoteAddress,
       "date": Date.now()
     });
 
