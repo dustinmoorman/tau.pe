@@ -12,7 +12,8 @@ app.controller('IndexCtrl', function ($scope, $http){
         $http.post('/url',{
           "url": $scope.long
         }).success(function(response){
-          $scope.url = 'http://tau.pe/' + response.slug;
+          var shortened = 'http://tau.pe/' + response.slug;
+          $scope.url = '<a href="' + shortened + '">' + shortened + '</a>';
         });
       }
     } else {
