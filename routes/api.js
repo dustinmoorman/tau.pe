@@ -43,7 +43,7 @@ exports.addUrl = function(request, response){
       "date": Date.now()
     });
 
-    json = {"slug": slug, "url": request.body.url};
+    json = {"slug": slug};
 
   }
 
