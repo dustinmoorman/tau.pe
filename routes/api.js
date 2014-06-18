@@ -13,6 +13,18 @@ var slugExists = function(slug, callable){
   });
 };
 
+var findExistingUrl = function(callable){
+
+  db.url.findOne({"url": url}, function(error, doc){
+    if (error) throw error;
+    if(doc){
+      callable(doc.slug);
+    }else {
+      callable(false);
+    }
+  });
+};
+
 var generateSlug = function(callable){
 
   var lib = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -39,13 +51,20 @@ exports.addUrl = function(request, response){
   var urlRegex = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
 
   if(urlRegex.test(request.body.url)){
-    generateSlug(function(slug){
-      db.url.insert({
-        "url": request.body.url,
-        "slug": slug,
-        "date": Date.now()
-      });
-      response.json({"slug": slug});
+    findExistingUrl(request.body.url, function(existingSlug){
+       if(existingSlug){
+         response.json({"slug": existingSlug});
+       } else {
+         generateSlug(function(slug){
+           db.url.insert({
+             "url": request.body.url,
+             "slug": slug,
+             "date": Date.now()
+           });
+           response.json({"slug": slug});
+         });
+       }
     });
+
   }
 };
