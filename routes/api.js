@@ -13,7 +13,7 @@ var slugExists = function(slug, callable){
   });
 };
 
-var findExistingUrl = function(callable){
+var findExistingUrl = function(url, callable){
 
   db.url.findOne({"url": url}, function(error, doc){
     if (error) throw error;
