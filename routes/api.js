@@ -1,6 +1,6 @@
 'use strict';
 
-var db = require("mongojs").connect("localhost:27017/taupe", ["url"]);
+var db = require("./auth.js");
 
 var slugExists = function(slug, callable){
   db.url.findOne({"slug": slug}, function(error, doc){
