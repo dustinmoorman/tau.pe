@@ -48,15 +48,17 @@ exports.getUrl = function(request, response){
 exports.addUrl = function(request, response){
 
   var urlRegex = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
+  var urlLoopProtection = /\b(http|https):\/\/tau\.pe\b/;
+  var url = request.body.url;
 
-  if(urlRegex.test(request.body.url)){
-    findExistingUrl(request.body.url, function(existingSlug){
+  if(urlRegex.test(url) && false === urlLoopProtection.test(url)){
+    findExistingUrl(url, function(existingSlug){
        if(existingSlug){
          response.json({"slug": existingSlug});
        } else {
          generateSlug(function(slug){
            db.url.insert({
-             "url": request.body.url,
+             "url": url,
              "slug": slug,
              "date": Date.now()
            });
