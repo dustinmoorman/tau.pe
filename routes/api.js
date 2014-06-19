@@ -25,7 +25,6 @@ var findExistingUrl = function(url, callable){
 };
 
 var generateSlug = function(callable){
-
   var lib = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
   var slug = "";
 
@@ -46,7 +45,6 @@ exports.getUrl = function(request, response){
 };
 
 exports.addUrl = function(request, response){
-
   var urlRegex = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
   var urlLoopProtection = /\b(http|https):(\/\/|\/\/www.)tau\.pe\b/;
   var url = request.body.url;
@@ -66,6 +64,5 @@ exports.addUrl = function(request, response){
          });
        }
     });
-
   }
 };
