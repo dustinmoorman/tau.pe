@@ -11,7 +11,6 @@ describe('api', function(){
 			},function(response){
 				var data = "";
 
-
 				response.on("data", function(chunk){
 					if(chunk.length > 0) data += chunk;
 				});
