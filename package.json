@@ -36,5 +36,8 @@
     "mocha": "^1.20.1",
     "mongojs": "^0.13.0",
     "time-grunt": "^0.3.2"
-  }
+  },
+	"scripts": {
+		"test": "mocha tests/*"
+	}
 }
