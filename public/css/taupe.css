@@ -28,3 +28,14 @@ h1 {
     margin: 1em;
     font-size: 1.1em;
 }
+
+.footer {
+	width:100%;
+	position: fixed;
+	bottom: 0;
+	left: 65%;
+	font-weight: bold;
+	font-size:0.7em;
+	margin-left:-200px;
+	margin-bottom: 4px;
+}
