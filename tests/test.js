@@ -31,12 +31,30 @@ describe('api', function(){
 describe('api', function(){
   describe('POST /url', function(){
     it('should return the same slug for a URL if it already exists in the DB', function(done){
-      http.post('http://tau.pe/url',{
-        "url": 'http://softlayer.com/'
-      }).success(function(response){
-        assert.equal('GB2SL', response.slug);
-        done();
+			var payload = '{"url":"http://softlayer.com/"}';
+			var post =  http.request({
+        host: 'www.tau.pe',
+        path: '/url',
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'}},
+				function(response){
+        var data = "";
+        response.on("data", function(chunk){
+          if(chunk.length > 0) data += chunk;
+        });
+        response.on("end", function(response){
+          if(data != null){
+            var json = JSON.parse(data);
+            if(json != null){
+							assert.equal('GB2SL', json.slug);
+							done();
+            }
+          }
+        });
       });
+
+			post.write(payload);
+			post.end();
     })
   })
 });
