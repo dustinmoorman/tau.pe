@@ -31,7 +31,7 @@ describe('api', function(){
 describe('api', function(){
   describe('POST /url', function(){
     it('should return the same slug for a URL if it already exists in the DB', function(done){
-      http.post('/url',{
+      http.post('http://tau.pe/url',{
         "url": 'http://softlayer.com/'
       }).success(function(response){
         assert.equal('GB2SL', response.slug);
