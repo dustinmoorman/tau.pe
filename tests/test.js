@@ -30,4 +30,4 @@ describe('api', function(){
 			}).end();
 		})
   })
-})
+});
