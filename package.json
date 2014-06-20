@@ -38,6 +38,6 @@
     "time-grunt": "^0.3.2"
   },
 	"scripts": {
-		"test": "mocha tests/*"
+		"test": "./node_modules/mocha/bin/mocha tests/*"
 	}
 }
