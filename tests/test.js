@@ -33,7 +33,7 @@ describe('api', function(){
 });
 
 describe('api', function(){
-  describe('#addUrl()', function(){
+  describe('POST /url', function(){
     it('should return the same slug for a URL if it already exists in the DB', function(done){
       $http.post('/url',{
         "url": 'http://softlayer.com/'
