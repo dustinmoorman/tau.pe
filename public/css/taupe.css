@@ -30,12 +30,12 @@ h1 {
 }
 
 .footer {
-	width:100%;
-	position: fixed;
+	position:fixed;
 	bottom: 0;
-	left: 65%;
+	left: 0;
+	right: 0;
 	font-weight: bold;
 	font-size:0.7em;
-	margin-left:-200px;
 	margin-bottom: 4px;
+	text-align: center;
 }
