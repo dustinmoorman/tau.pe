@@ -46,12 +46,12 @@ describe('api', function(){
             if(data != null){
               var json = JSON.parse(data);
               if(json != null){
-		assert.equal('GB2SL', json.slug);
-	        done();
+		            assert.equal('GB2SL', json.slug);
+	              done();
+              }
             }
-          }
+          });
         });
-      });
       post.write(payload);
       post.end();
     })
