@@ -54,6 +54,6 @@ describe('api', function(){
         });
       post.write(payload);
       post.end();
-    })
-  })
+    });
+  });
 });
