@@ -24,8 +24,8 @@ describe('api', function(){
           done();
         });
       }).end();
-    })
-  })
+    });
+  });
 });
 
 describe('api', function(){
