@@ -1,7 +1,7 @@
 var http = require('http');
 
 exports.index = function(request, response){
-    response.render('index', {'title': 'taupe'})
+  response.render('index', {'title': 'taupe'})
 }
 
 exports.handleSlug = function(request, response){
