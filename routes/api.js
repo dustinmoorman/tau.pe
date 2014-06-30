@@ -45,7 +45,7 @@ exports.getUrl = function(request, response){
 };
 
 exports.addUrl = function(request, response){
-  var urlRegex = /(ftp|http(s?)):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
+  var urlRegex = /(http(s?)):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
   var urlLoopProtection = /\b(http(s?)):(\/\/|\/\/www.)tau\.pe\b/;
   var url = request.body.url;
 
