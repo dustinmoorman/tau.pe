@@ -7,7 +7,7 @@ It's a link shortener service, built by [Dustin Moorman](https://github.com/dust
 
 ## How does it work?
 
-A simple RESTful API implemented in Node / Express waits in the background while requests are made via AngularJS to send and retrieve data about URLs held in MongoDB. When a user requests a shortened link, an API call is made to retrieve the associated URL and the user is 304'd to the destination!
+A simple RESTful API implemented in Node / Express waits in the background while requests are made via AngularJS to send and retrieve data about URLs held in MongoDB. When a user requests a shortened link, an API call is made to retrieve the associated URL and the user is 302'd to the destination!
 
 ## Can I contribute?
 
