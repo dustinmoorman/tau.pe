@@ -7,9 +7,11 @@ var express = require('express'),
     routes = require('./routes'),
     http = require('http'),
     api = require('./routes/api'),
-    app = express();
+    morgan = require('morgan'),
+		app = express();
 
 app.engine('html', cons.swig);
+app.use(morgan())
 app.set('view engine', 'html');
 app.set('views', __dirname + '/views');
 
