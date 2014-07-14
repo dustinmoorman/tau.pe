@@ -11,7 +11,7 @@ var express = require('express'),
 		app = express();
 
 app.engine('html', cons.swig);
-app.use(morgan())
+app.use(morgan('short'))
 app.set('view engine', 'html');
 app.set('views', __dirname + '/views');
 
