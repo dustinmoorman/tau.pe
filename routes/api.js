@@ -1,5 +1,4 @@
 'use strict';
-
 var db = require("./auth.js");
 
 var slugExists = function(slug, callable){
