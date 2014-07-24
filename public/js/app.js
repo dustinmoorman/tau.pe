@@ -1,3 +1,5 @@
+'use strict';
+
 var app = angular.module('taupe', []).config(function($interpolateProvider){
   $interpolateProvider.startSymbol('{[{').endSymbol('}]}');
 });
