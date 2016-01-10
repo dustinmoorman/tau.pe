@@ -38,13 +38,14 @@
     </div>
     <div class="row">
       <div class="medium-10 medium-offset-1 footer">
-        <div> &copy; 2014 tau.pe, handmade by <a href="http://dustinmoorman.com/">Dustin Moorman</a>.</div>
+        <div> &copy; <span id="date"></span> tau.pe, handmade by <a href="http://dustinmoorman.com/">Dustin Moorman</a>.</div>
       </div>
     </div>
     <script src="/public/js/vendor/jquery.js"></script>
     <script src="/public/js/foundation.min.js"></script>
     <script>
         $(document).foundation();
+        $("#date").html(new Date().getFullYear());
     </script>
   </body>
 </html>
