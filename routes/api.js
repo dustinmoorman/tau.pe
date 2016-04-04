@@ -15,9 +15,9 @@ var slugExists = function(slug, callable){
 var findExistingUrl = function(url, callable){
   db.url.findOne({"url": url}, function(error, doc){
     if (error) throw error;
-    if(doc){
+    if (doc) {
       callable(doc.slug);
-    }else {
+    } else {
       callable(false);
     }
   });
