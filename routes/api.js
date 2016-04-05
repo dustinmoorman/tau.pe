@@ -50,7 +50,7 @@ exports.addUrl = function(request, response){
 
   if(urlRegex.test(url) && false === urlLoopProtection.test(url)){
     findExistingUrl(url, function(existingSlug){
-       if(existingSlug){
+       if (existingSlug) {
          response.json({"slug": existingSlug});
        } else {
          generateSlug(function(slug){
