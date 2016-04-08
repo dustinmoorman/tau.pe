@@ -1,10 +1,10 @@
 'use strict';
 var db = require("./auth.js");
 
-var slugExists = function(slug, callable){
-  db.url.findOne({"slug": slug}, function(error, doc){
+var slugExists = function(slug, callable) {
+  db.url.findOne({"slug": slug}, function(error, doc) {
     if (error) throw error;
-    if(doc){
+    if(doc) {
       generateSlug(callable);
     } else {
       callable(slug);
@@ -12,8 +12,8 @@ var slugExists = function(slug, callable){
   });
 };
 
-var findExistingUrl = function(url, callable){
-  db.url.findOne({"url": url}, function(error, doc){
+var findExistingUrl = function(url, callable) {
+  db.url.findOne({"url": url}, function(error, doc) {
     if (error) throw error;
     if (doc) {
       callable(doc.slug);
