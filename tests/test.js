@@ -1,13 +1,13 @@
 var assert = require("assert");
 var http = require("http");
 
-describe('api', function(){
-  describe('GET /url/:slug', function(){
-    it('should return the URL for the supplied slug', function(done){
+describe('api', function() {
+  describe('GET /url/:slug', function() {
+    it('should return the URL for the supplied slug', function(done) {
       http.get({
         host: 'www.tau.pe',
-	      path: '/url/GB2SL'
-      },function(response){
+	path: '/url/GB2SL'
+      }, function(response) {
         var data = "";
         response.on("data", function(chunk){
           if(chunk.length > 0) data += chunk;
