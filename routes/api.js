@@ -27,8 +27,9 @@ var generateSlug = function(callable) {
   var lib = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
   var slug = "";
 
-  for(var i=0; i < Math.floor((Math.random() * 8)+1); i++)
+  for (var i=0; i < Math.floor((Math.random() * 8)+1); i++) {
     slug += lib.charAt(Math.floor(Math.random() * lib.length));
+  }
 
   slugExists(slug, callable);
 };
