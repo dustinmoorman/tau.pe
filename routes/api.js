@@ -4,7 +4,7 @@ var db = require("./auth.js");
 var slugExists = function(slug, callable) {
   db.url.findOne({"slug": slug}, function(error, doc) {
     if (error) throw error;
-    if(doc) {
+    if (doc) {
       generateSlug(callable);
     } else {
       callable(slug);
@@ -23,7 +23,7 @@ var findExistingUrl = function(url, callable) {
   });
 };
 
-var generateSlug = function(callable){
+var generateSlug = function(callable) {
   var lib = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
   var slug = "";
 
