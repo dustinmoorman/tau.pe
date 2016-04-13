@@ -8,7 +8,7 @@ var express = require('express'),
     http = require('http'),
     api = require('./routes/api'),
     morgan = require('morgan'),
-		app = express();
+    app = express();
 
 app.engine('html', cons.swig);
 app.use(morgan('short'))
