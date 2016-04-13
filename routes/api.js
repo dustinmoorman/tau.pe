@@ -49,12 +49,12 @@ exports.addUrl = function(request, response) {
   var urlLoopProtection = /\b(http(s?)):(\/\/|\/\/www.)tau\.pe\b/;
   var url = request.body.url;
 
-  if(urlRegex.test(url) && false === urlLoopProtection.test(url)){
-    findExistingUrl(url, function(existingSlug){
+  if(urlRegex.test(url) && false === urlLoopProtection.test(url)) {
+    findExistingUrl(url, function(existingSlug) {
        if (existingSlug) {
          response.json({"slug": existingSlug});
        } else {
-         generateSlug(function(slug){
+         generateSlug(function(slug) {
            db.url.insert({
              "url": url,
              "slug": slug,
