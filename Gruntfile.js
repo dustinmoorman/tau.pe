@@ -60,5 +60,4 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-concurrent');
 
     grunt.registerTask('default', ['concurrent', 'jshint']);
-
 };
