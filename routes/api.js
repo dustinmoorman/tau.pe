@@ -36,7 +36,7 @@ var generateSlug = function(callable) {
 
 exports.getUrl = function(request, response) {
   db.url.findOne({"slug": request.params.id}, function(error, url) {
-    if(error) {
+    if (error) {
       response.json(error);
     } else {
       response.json(url);
@@ -49,7 +49,7 @@ exports.addUrl = function(request, response) {
   var urlLoopProtection = /\b(http(s?)):(\/\/|\/\/www.)tau\.pe\b/;
   var url = request.body.url;
 
-  if(urlRegex.test(url) && false === urlLoopProtection.test(url)) {
+  if (urlRegex.test(url) && false === urlLoopProtection.test(url)) {
     findExistingUrl(url, function(existingSlug) {
        if (existingSlug) {
          response.json({"slug": existingSlug});
