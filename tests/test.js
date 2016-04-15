@@ -9,8 +9,10 @@ describe('api', function() {
 	path: '/url/GB2SL'
       }, function(response) {
         var data = "";
-        response.on("data", function(chunk){
-          if(chunk.length > 0) data += chunk;
+        response.on("data", function(chunk) {
+          if (chunk.length > 0) {
+            data += chunk;
+          }
         });
         response.on("end", function(){
           var url = '';
