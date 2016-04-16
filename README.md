@@ -1,6 +1,7 @@
 tau.pe
 ======
 ![Build Status](https://api.travis-ci.org/dustinmoorman/tau.pe.png)
+[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
 ## What is it?
 
 It's a link shortener service, built by [Dustin Moorman](https://github.com/dustinmoorman) for the web, using [Node](https://github.com/joyent/node), [AngularJS](https://angularjs.org/), [Express.js](http://expressjs.com/), and [MongoDB](http://www.mongodb.org/).
