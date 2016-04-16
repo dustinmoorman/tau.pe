@@ -1,7 +1,7 @@
 tau.pe
 ======
 ![Build Status](https://api.travis-ci.org/dustinmoorman/tau.pe.png)
-[![License](https://img.shields.io/badge/license-BSD-red.svg)](https://github.com/dustinmoorman/tau.pe/blob/master/LICENSE)
+[![License](https://img.shields.io/badge/license-BSD-red.svg)](https://raw.githubusercontent.com/dustinmoorman/tau.pe/master/LICENSE)
 ## What is it?
 
 It's a link shortener service, built by [Dustin Moorman](https://github.com/dustinmoorman) for the web, using [Node](https://github.com/joyent/node), [AngularJS](https://angularjs.org/), [Express.js](http://expressjs.com/), and [MongoDB](http://www.mongodb.org/).
