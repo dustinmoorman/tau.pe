@@ -14,11 +14,11 @@ describe('api', function() {
             data += chunk;
           }
         });
-        response.on("end", function(){
+        response.on("end", function() {
           var url = '';
-          if(data != null){
+          if (data != null) {
             var json = JSON.parse(data);
-            if(json != null){
+            if (json != null) {
               url = json.url;
             }
           }
